@@ -1,3 +1,12 @@
-<p>
-  catalog works!
-</p>
+<div class="catalog">
+    <div class="catalog__header">Please Select a Product Category</div>
+
+    <div class="catalog__body">
+        <div class="category" *ngFor="let category of categoryList">
+            <mat-card>
+                <div class="category__name">{{ category.productCategoryName }}</div>
+                <div class="category__description">{{ category.description }}</div>
+            </mat-card>
+        </div>
+    </div>
+</div>
