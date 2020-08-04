@@ -4,26 +4,18 @@ import { CatalogService } from './catalog.service';
 import { HttpClient } from '@angular/common/http';
 import { ProductCategory } from '../models/product-category';
 import { of } from 'rxjs';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { createStub } from '../test/helpers/create-stub';
 
 describe('CatalogService', () => {
     let service: CatalogService;
     let mockHttpClient: HttpClient;
-    let httpTestingController: HttpTestingController;
 
     beforeEach(() => {
-        TestBed.configureTestingModule({
-            imports: [HttpClientTestingModule]
-        });
-
-        mockHttpClient = TestBed.get(HttpClient);
-        httpTestingController = TestBed.get(HttpTestingController);
-
-        service = TestBed.get(CatalogService);
+        mockHttpClient = createStub(HttpClient);
+        service = new CatalogService(mockHttpClient);
     });
 
     it('should be created', () => {
-        const service: CatalogService = TestBed.get(CatalogService);
         expect(service).toBeTruthy();
     });
 

@@ -10,6 +10,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { CategoryComponent } from './components/category/category.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
     declarations: [
@@ -25,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
         HttpClientModule,
         MatToolbarModule,
         MatCardModule,
+        MatIconModule,
     ],
     providers: [],
     bootstrap: [AppComponent]
