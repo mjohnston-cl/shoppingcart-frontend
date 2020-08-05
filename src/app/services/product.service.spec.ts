@@ -29,6 +29,7 @@ describe('ProductService', () => {
                 actual = products;
             });
 
+            expect(mockHttpClient.get).toHaveBeenCalledWith('http://localhost:9090/api/products/some-category-name');
             expect(actual).toEqual(expected);
         });
     });

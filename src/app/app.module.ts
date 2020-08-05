@@ -11,6 +11,7 @@ import { MatCardModule } from '@angular/material/card';
 import { CategoryComponent } from './components/category/category.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -23,6 +24,7 @@ import { MatIconModule } from '@angular/material/icon';
         BrowserModule,
         AppRoutingModule,
         NoopAnimationsModule,
+        ReactiveFormsModule,
         HttpClientModule,
         MatToolbarModule,
         MatCardModule,

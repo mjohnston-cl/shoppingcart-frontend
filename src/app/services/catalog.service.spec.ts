@@ -1,5 +1,3 @@
-import { TestBed } from '@angular/core/testing';
-
 import { CatalogService } from './catalog.service';
 import { HttpClient } from '@angular/common/http';
 import { ProductCategory } from '../models/product-category';
@@ -43,6 +41,7 @@ describe('CatalogService', () => {
                 actual = categoryList;
             });
 
+            expect(mockHttpClient.get).toHaveBeenCalledWith('http://localhost:9090/api/productCatalog/productCategories');
             expect(actual).toEqual(expected);
         });
     });

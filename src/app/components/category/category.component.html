@@ -2,19 +2,19 @@
     <div class="category__header">Browse {{productCategoryName}} Products</div>
 
     <div class="category__body">
-      <div class="product" *ngFor="let product of products">
-        <mat-card>
-            <div class="product__info">
-                <div class="product__name">{{product.productName}}</div>
-                <div class="product__sku">SKU: {{product.skuNumber}}</div>
-                <div class="product__description">{{product.description}}</div>
-                <div class="product__price">${{product.price}}</div>
-            </div>
-            <div class="product__icon">
-                <mat-icon>add_shopping_cart</mat-icon>
-                <div class="product_stock">In Stock: {{product.inventoryCount}}</div>
-            </div>
-        </mat-card>
-      </div>
+        <div class="product" *ngFor="let product of products">
+            <mat-card>
+                <div class="product__info">
+                    <div class="product__name">{{product.productName}}</div>
+                    <div class="product__sku">SKU: {{product.skuNumber}}</div>
+                    <div class="product__description">{{product.description}}</div>
+                    <div class="product__price">${{product.price}}</div>
+                </div>
+                <div class="product__icon">
+                    <mat-icon>add_shopping_cart</mat-icon>
+                    <div class="product_stock">In Stock: {{product.inventoryCount}}</div>
+                </div>
+            </mat-card>
+        </div>
     </div>
 </div>

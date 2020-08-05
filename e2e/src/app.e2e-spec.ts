@@ -1,15 +1,15 @@
-import { Homepage } from './app.po';
+import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
 
 describe('Shopping Cart App', () => {
-    let homepage: Homepage;
+    let page: AppPage;
 
     beforeEach(() => {
-        homepage = new Homepage();
+        page = new AppPage();
     });
 
     it('should be on the homepage', () => {
-        homepage.navigateTo();
+        page.navigateTo();
         expect(browser.getCurrentUrl()).toContain('catalog');
     });
 
