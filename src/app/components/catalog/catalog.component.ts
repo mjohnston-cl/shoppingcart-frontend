@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductCategory } from '../../models/product-category';
-import { CatalogService } from '../../services/catalog.service';
+import { CategoryService } from '../../services/category.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,13 +12,13 @@ export class CatalogComponent implements OnInit {
     categoryList: ProductCategory[] = [];
 
     constructor(
-        private catalogService: CatalogService,
+        private categoryService: CategoryService,
         private router: Router,
     ) {
     }
 
     ngOnInit() {
-        this.catalogService.getProductCategories().subscribe((categories: ProductCategory[]) => {
+        this.categoryService.getProductCategories().subscribe((categories: ProductCategory[]) => {
             this.categoryList = categories;
         })
     }

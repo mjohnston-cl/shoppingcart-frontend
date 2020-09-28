@@ -1,16 +1,16 @@
-import { CatalogService } from './catalog.service';
+import { CategoryService } from './category.service';
 import { HttpClient } from '@angular/common/http';
 import { ProductCategory } from '../models/product-category';
 import { of } from 'rxjs';
 import { createStub } from '../test/helpers/create-stub';
 
 describe('CatalogService', () => {
-    let service: CatalogService;
+    let service: CategoryService;
     let mockHttpClient: HttpClient;
 
     beforeEach(() => {
         mockHttpClient = createStub(HttpClient);
-        service = new CatalogService(mockHttpClient);
+        service = new CategoryService(mockHttpClient);
     });
 
     it('should be created', () => {

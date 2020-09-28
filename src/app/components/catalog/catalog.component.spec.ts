@@ -1,5 +1,5 @@
 import { CatalogComponent } from './catalog.component';
-import { CatalogService } from '../../services/catalog.service';
+import { CategoryService } from '../../services/category.service';
 import { of } from 'rxjs';
 import { ProductCategory } from '../../models/product-category';
 import { createStub } from '../../test/helpers/create-stub';
@@ -7,14 +7,14 @@ import { Router } from '@angular/router';
 
 describe('CatalogComponent', () => {
     let component: CatalogComponent;
-    let mockCatalogService: CatalogService;
+    let mockCategoryService: CategoryService;
     let mockRouter: Router;
 
     beforeEach(() => {
-        mockCatalogService = createStub(CatalogService);
+        mockCategoryService = createStub(CategoryService);
         mockRouter = createStub(Router);
         component = new CatalogComponent(
-            mockCatalogService,
+            mockCategoryService,
             mockRouter
         );
     });
@@ -40,7 +40,7 @@ describe('CatalogComponent', () => {
         ];
 
         beforeEach(() => {
-            spyOn(mockCatalogService, 'getProductCategories').and.returnValue(of(expected))
+            spyOn(mockCategoryService, 'getProductCategories').and.returnValue(of(expected))
         });
 
         it('should get product categories', () => {
